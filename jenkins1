@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    stages {
+        stage('clone project') {
+            
+            steps {
+                
+                git 'https://github.com/sachan007/OT-Java-WebApp.git'
+            }
+        }
+        stage('Example Test') {
+           
+            steps {
+                echo 'Hello, JDK'
+                sh 'java -version'
+            }
+        }
+    }
+}
